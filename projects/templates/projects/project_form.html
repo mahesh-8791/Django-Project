@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Project Form</h1> <!-- Heading for the project form page. -->
+
+<form method ="POST">  <!-- Form to submit project data using POST method. -->
+    {% csrf_token %} <!-- Data want manipulated securely. -->
+    {{ form }}
+    <input type = "submit"> 
+</form>
+{% endblock %}

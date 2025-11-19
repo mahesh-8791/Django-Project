@@ -1,0 +1,13 @@
+{% extends 'main.html %}
+
+{% block content %}
+
+<h1>{{project.title}}</h1>  <!-- accessing title attribute of project object. -->
+<hr>
+{% for tag in projects.tags.all %}
+<span style="border:1px solid gray">{{tag}}</span>
+{% endfor %}
+<hr>
+<br>
+<p>{{project.description}}</p>  <!-- accessing description attribute of project object. -->
+{% endblock content %}
