@@ -12,3 +12,4 @@ urlpatterns = [
 #appending url paths for media files
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #MEDIA_ROOT is where we send user uploaded content & MEDIA_URL to saccess that content.
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)#2

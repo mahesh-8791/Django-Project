@@ -6,7 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True) #null = we dont need to set description FOR DATABASE.
                                                           #blank = keeping value empty still able to save form.
-    featured_attribute = models.ImageField(null=True, blank=True, default="default.jpg") #image field to upload image & img not added then default.jpg will be used.
+    featured_image = models.ImageField(null=True, blank=True, default="default.jpg") #image field to upload image & img not added then default.jpg will be used.
     demo_link = models.CharField(max_length=2000, null=True, blank=True) #eg.= link to live demo
     source_link = models.CharField(max_length=2000, null=True, blank=True)#eg.= github link
     tags = models.ManyToManyField('Tag', blank=True) #many to many relationship with Tag model. used in class Tag below.

@@ -20,7 +20,7 @@ def createProject(request):
         form = ProjectForm()
 
         if request.method == 'POST':        #CRUD Operation --> Create, Read, Update, Delete
-            form = ProjectForm(request.POST)
+            form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('projects') #user redirected to projects page after creating project.
@@ -34,7 +34,7 @@ def updateProject(request, pk):
     form = ProjectForm(instance=project) # instance is project that we want to update.
 
     if request.method == 'POST':        #CRUD Operation --> Create, Read, Update, Delete
-        form = ProjectForm(request.POST, instance=project) # #to check which project to update.
+        form = ProjectForm(request.POST, request.FILES, instance=project) # #to check which project to update.
     if form.is_valid():
         form.save()
         return redirect('projects') #user redirected to projects page after creating project.
