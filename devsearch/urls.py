@@ -6,7 +6,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('projects.urls'))
+    path('projects/', include('projects.urls')),
+    path('', include('users.urls')),#now this is root url. So when we go to localhost:8000/ it will direct to users app.
 ]
 
 #appending url paths for media files

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'projects.apps.ProjectsConfig' #we are able to access projects app.->migrrations, bcz we added this line.
+    'projects.apps.ProjectsConfig', #we are able to access projects app.->migrrations, bcz we added this line.
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +63,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
