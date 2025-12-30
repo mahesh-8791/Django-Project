@@ -2,12 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 # Create your models here.
-<<<<<<< HEAD
-
-class Profile(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, null=True, blank=True) #on delete the uer deleted then profile deleted.
-=======
 from django.db.models.signals import post_save, post_delete # to create profile when user is created
 from django.dispatch import receiver
 
@@ -15,7 +9,6 @@ from django.dispatch import receiver
 class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, null=True, blank=True) #on delete the user deleted then profile deleted.
->>>>>>> feature/Add-Apps
     name = models.CharField(max_length=200, blank=True, null=True)
     email = models.EmailField(max_length=500, blank=True, null=True)
     username = models.CharField(max_length=200, blank=True, null=True)
