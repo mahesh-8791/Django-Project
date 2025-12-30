@@ -1,6 +1,6 @@
 from django.db import models
 import uuid 
-from users.models import Profile
+from users.models import Profile 
 
 # Create your models here.--> which represents tables.
 class Project(models.Model):
